@@ -1,0 +1,23 @@
+{
+  "name": "yelpcamp",
+  "version": "1.0.0",
+  "description": "Express application with Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeherbert/yelpcamp-application.git"
+  },
+  "author": "Bryan Herbert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeherbert/yelpcamp-application/issues"
+  },
+  "homepage": "https://github.com/codeherbert/yelpcamp-application#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

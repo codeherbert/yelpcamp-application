@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express    = require("express"), 
       app        = express(),
       bodyParser = require("body-parser"),
@@ -15,8 +16,9 @@ const express    = require("express"),
 const campgroundRoutes = require("./routes/campgrounds"),
       commentRoutes    = require("./routes/comments"),
       indexRoutes      = require("./routes/index");
-      
-mongoose.connect("mongodb://localhost:27017/yelp_camp", { useNewUrlParser: true });
+     
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -27,7 +29,7 @@ app.use(flash());
 //PASSPORT CONFIGURATION
 
 app.use(require("express-session")( {
-    secret: "Webdevbootcamp is pure awesomeness!",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false
 }));

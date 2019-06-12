@@ -1,1 +1,2 @@
-
+# dontenv environment variables file
+.env
